@@ -78,7 +78,6 @@ class SearchForm extends Component {
     }
 
     resetForm = () => {
-        console.log("reset");
         this.setState({
             'name': "",
             'searchByInput': "",
@@ -113,7 +112,6 @@ class SearchForm extends Component {
                 "searchByInput": this.state.searchByInput,
                 "searchOption": this.state.searchOption
             };
-            console.log(data);
             axios.post('https://reqres.in/api/users', data)
             .then(response => {
                 console.log(response);    
